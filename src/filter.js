@@ -1,12 +1,16 @@
 import React from 'react';
 
-class Filters extends React.Component
+class Productfilters extends React.Component
 {
 	render(){
 		return(
-		<div>
-		</div>
+		<form>
+		 <input type="text" placeholder="search..."/>
+		  <div >
+				<input type="checkbox"/> only show products +'in'+ stock
+		  </div>
+		</form>
 		);
 	}
 }
-export default Filters;
+export default Productfilters;
