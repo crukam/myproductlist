@@ -7,7 +7,7 @@ class Productfilters extends React.Component
 		<form>
 		 <input type="text" placeholder="search..."/>
 		  <div >
-				<input type="checkbox"/> only show products +'in'+ stock
+				<input type="checkbox"/> only show products in stock
 		  </div>
 		</form>
 		);
