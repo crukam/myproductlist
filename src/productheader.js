@@ -6,11 +6,12 @@ import './productheader.css'
 class Productheader extends  React.Component
 {
 	render(){
+		let currentSortingButton = this.props.sortingType.column===this.props.column? this.props.sortingType.direction:false;
 		return(
 		<th>
 	       {this.props.column}
-           <button className="productheader">&#x25B2;</button>
-           <button>&#x25BC;</button>
+           <button className= {currentSortingButton==='asc' ? 'productheader': ''}>&#x25B2;</button>
+           <button className= {currentSortingButton==='desc' ? 'productheader': ''}>&#x25BC;</button>
 		</th>
 		);
 	}

@@ -14,13 +14,14 @@ var PRODUCTS = {
 class Products extends React.Component{
 	constructor(props){
 		super(props);
+		this.state={products:PRODUCTS, searchText:'',instockCheckbox:false};
 	}
 	render()
 	{
 		return(
 			<div>
-			<Productfilters></Productfilters>
-			<Producttable products={PRODUCTS}></Producttable>
+			<Productfilters searchText={this.state.searchText} instockcheckbox={this.state.instockCheckbox}></Productfilters>
+			<Producttable products={PRODUCTS} searchText={this.state.searchText} instockcheckbox={this.state.instockCheckbox}></Producttable>
 			<Productform></Productform>
 			</div>
 		);
