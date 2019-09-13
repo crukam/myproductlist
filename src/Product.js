@@ -14,14 +14,18 @@ var PRODUCTS = {
 class Products extends React.Component{
 	constructor(props){
 		super(props);
+		this.handleFilter =this.handleFilter.bind(this);
 		this.state={products:PRODUCTS, searchText:'',instockCheckbox:false};
+	}
+	handleFilter(filterInput){
+		this.setState(filterInput);
 	}
 	render()
 	{
 		return(
 			<div>
-			<Productfilters searchText={this.state.searchText} instockcheckbox={this.state.instockCheckbox}></Productfilters>
-			<Producttable products={PRODUCTS} searchText={this.state.searchText} instockcheckbox={this.state.instockCheckbox}></Producttable>
+			<Productfilters searchText={this.state.searchText} instockcheckbox={this.state.instockCheckbox} fiLter={this.handlerFilter}></Productfilters>
+			<Producttable products={PRODUCTS} searchText={this.state.searchText} instockcheckbox={this.state.instockCheckbox} fiLter={this.handlerFilter}></Producttable>
 			<Productform></Productform>
 			</div>
 		);
